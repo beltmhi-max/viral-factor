@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viral AI Factory</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body {
+            background: radial-gradient(circle at top, #1a1a2e, #16213e, #0f3460);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            height: 100vh;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 50px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        h1 { font-weight: 300; letter-spacing: 2px; color: #4eeaff; }
+
+        input {
+            width: 80%;
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            margin-bottom: 20px;
+            outline: none;
+            border-bottom: 2px solid #4eeaff;
+        }
+
+        .btn-glow {
+            background: linear-gradient(45deg, #4eeaff, #9d50bb);
+            border: none;
+            padding: 15px 40px;
+            color: white;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(78, 234, 255, 0.4);
+            transition: 0.3s;
+        }
+
+        .btn-glow:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(78, 234, 255, 0.7); }
+
+        .footer-tabs {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 40px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 30px;
+            border-radius: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glass-card">
+        <h1>VIRAL FACTORY</h1>
+        <p>Paste YouTube Link & Get Gold</p>
+        
+        <input type="text" id="yt-link" placeholder="https://youtube.com/watch?v=...">
+        <br>
+        <button class="btn-glow" onclick="startGeneration()">GENERATE SCRIPTS</button>
+    </div>
+
+    <div id="result-area"></div>
+
+    <div class="footer-tabs">
+        <span>🏠</span>
+        <span>📁</span>
+        <span>💰</span>
+    </div>
+
+    <script>
+        // This is where we will put the Monetag & AI logic
+        function startGeneration() {
+            const link = document.getElementById('yt-link').value;
+            if(!link) { alert("Please paste a link first!"); return; }
+            
+            // 1. Show Monetag Ad (We will add the code here)
+            alert("Watching ad to unlock AI brain...");
+            
+            // 2. Call your Python Brain
+            alert("AI is reading: " + link);
+        }
+    </script>
+</body>
+</html>
